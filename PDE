@@ -1,0 +1,112 @@
+Here's the code from my .pde file:
+
+size(1200,1000); //canvas
+background(255); //background white
+
+//body
+strokeWeight(0); //bottom right rect stroke
+fill(0); //bottom right rect fill
+rect(600,700,600,300); //bottom right rect shoulder
+
+//hairline and faceline
+ellipse(875,650,375,650); //right large hair circle
+ellipse(375,700,475,450); //left bottom hair circle
+ellipse(275,625,300,550); //left middle hair circle connect
+triangle(450,800,600,700,600,1000);// bottom left connect hair to body triangle
+triangle(550,650,600,700,550,750); //small left neck to hair triangle
+rect(305,200,20,300); //left middle hair rectangle
+//ellipse(360,375,250,350); // middle left hair circle
+ellipse(350,400,275,650); // middle left hair circle 2
+ellipse(375,100,200,350); //long top left hair circle
+ellipse(300,375,150,850); //top left connection hair circle
+//ellipse(210,660,200,430); //bottom left tall outer hairline circle
+ellipse(850,50,250,250); //top right head circle
+ellipse(950,200,150,300); //top middle right hair circle
+ellipse(785,65,250,300); //top right bangs circle
+triangle(605,175,700,100,850,250); //top right bangs triangle
+triangle(785,100,875,100,880,600); //right bang to hairline triangle
+rect(400,0,450,50); //top of head center rect
+ellipse(415,75,275,350); //top left bangs circle
+ellipse(685,50,300,300); //top right bangs circle
+rect(820,35,135,1000); //right hair rect top to bottom
+rect(315,0,155,800); //left hair rect top to bottom
+rect(930,350,55,400); //right hair short rect mid to bottom
+triangle(985,350,1175,700,930,700); //right shoulder and hair triangle
+triangle(850,200,970,50,1060,500); //right outside hairline to shoulder triangle
+fill(255); //white fill for hairline
+noStroke(); //harline stroke removal
+ellipse(485,388,110,255); //bottom left hairline circle
+ellipse(490,304,100,150); //top left hairline circle
+triangle(485,520,550,500,610,650); //bottom left hairline triangle
+ellipse(780,304,100,110); //right inside upper hairline circle
+ellipse(162,300,150,205); //left outside hairline circle
+ellipse(1011,20,80,200); //top right outside hairline circle
+triangle(200,840,250,900,300,925); //bottom left hairline detail
+
+//facial features
+fill(0); // black fill for facial features
+ellipse(482,258,135,60); //left eye black oval
+ellipse(753,260,120,60); //right eye black oval
+fill(255); //white fill for facial details
+ellipse(492,278,80,35); //left eye white
+ellipse(755,278,80,35); //right eye white
+fill(0); //black fill for irises 
+ellipse(497,263,45,45);//left iris
+ellipse(755,263,45,45); //right iris
+triangle(570,445,578,440,580,450); //left nostril triangle
+triangle(640,450,645,440,654,445); //right nostril triangle
+noFill(); //no fill for bezier jawline
+stroke(0); //black stroke for bezier jawline
+strokeWeight(3); //stroke weight for jawline
+bezier(470,520,500,640,740,700,750,420); //jawline
+strokeWeight(13); //stroke for eyebrows
+line(545,220,460,205); //left eyebrow
+line(700,220,800,205); //right eyebrow
+
+//shadows
+fill(110,200);
+noStroke();
+triangle(690,588,690,701,613,700); //jawline shadow
+triangle(660,498,685,498,626,525); //right bottom lip shadow
+triangle(685,498,665,498,635,480); //right bottom lip shadow
+triangle(595,480,610,487,610,495);//left upper inside lip shadow
+fill(110,100);
+triangle(612,433,620,457,605,457); //nose center shadow
+//triangle(715,228,650,300,670,230);
+bezier(655,458,665,465,672,437,670,435); //right nostril shadow
+
+//black liplines and nose shadows
+fill(0); //black fill
+stroke(0); //black stroke
+strokeWeight(2); //stroke weight for lipline
+line(540,500,680,498); //lipline center
+bezier(595,525,610,527,610,527,625,525); //lipline bottom bezier
+triangle(540,500,550,500,560,508); //bottom left lip corner shadow
+triangle(680,498,665,498,660,508); //bottom right lip corner shadow
+triangle(595,500,625,500,610,505); //bottom center lipline shadow
+line(595,480,605,485); //upper/inner/left lipline
+line(595,480,585,482); //upper/outer/left lipline
+line(615,485,625,480); //upper/inner/right lipline
+triangle(610,453,612,445,615,453); //inner black nose shadow
+
+
+//hair shadows
+fill(200,80);
+bezier(300,0,320,150,220,450,190,620); //hair highlight
+//top left bangs detail
+beginShape();
+vertex(500,10); //first point bangs left detail
+bezierVertex(470,20,490,70,435,150); //top left bangs detail
+endShape();
+//top right bangs detail
+beginShape();
+vertex(740,80);
+bezierVertex(760,100,770,135,770,150);
+endShape();
+
+
+
+//hair details
+noFill(); //no fill for hairline details
+strokeWeight(8); //stroke weight for hairline details
+ellipse(938,95,150,200);
